@@ -103,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/mongodb/service/impl/MongoUserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="156" column="8" lean-forward="true" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="8" />
+            <state relative-caret-position="260">
+              <caret line="166" column="54" lean-forward="true" selection-start-line="166" selection-start-column="54" selection-end-line="166" selection-end-column="54" />
               <folding>
                 <element signature="e#1995#2011#1" expanded="true" />
                 <element signature="e#2054#2074#1" expanded="true" />
@@ -522,15 +522,15 @@
       <workItem from="1548723251679" duration="5395000" />
       <workItem from="1548729550715" duration="95000" />
       <workItem from="1549939720379" duration="8000" />
-      <workItem from="1549943723401" duration="6406000" />
+      <workItem from="1549943723401" duration="7100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14557000" />
+    <option name="totallyTimeSpent" value="15251000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
@@ -680,8 +680,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/mongodb/service/impl/MongoUserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="156" column="8" lean-forward="true" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="8" />
+        <state relative-caret-position="260">
+          <caret line="166" column="54" lean-forward="true" selection-start-line="166" selection-start-column="54" selection-end-line="166" selection-end-column="54" />
           <folding>
             <element signature="e#1995#2011#1" expanded="true" />
             <element signature="e#2054#2074#1" expanded="true" />
