@@ -5,7 +5,7 @@
     <parent>
         <artifactId>Dragonsking</artifactId>
         <groupId>PhotoStation</groupId>
-        <version>2019.1</version>
+        <version>2019</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -14,7 +14,7 @@
         <dependency>
             <groupId>PhotoStation</groupId>
             <artifactId>core</artifactId>
-            <version>2019.1</version>
+            <version>2019</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

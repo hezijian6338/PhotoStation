@@ -5,7 +5,7 @@
     <parent>
         <groupId>PhotoStation</groupId>
         <artifactId>Dragonsking</artifactId>
-        <version>2019.1</version>
+        <version>2019</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
