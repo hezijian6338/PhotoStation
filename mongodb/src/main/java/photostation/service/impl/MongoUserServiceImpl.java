@@ -162,7 +162,7 @@ public class MongoUserServiceImpl implements MongoUserService {
         UserFile userFile = new UserFile();
         userFile.setFilename(newName);
         userFile.setUser_id(user_id);
-        userFile.setCreateDate(date.toString());
+        userFile.setCreateDate(format);
         userFile.setId(null);
         userFileService.add(userFile);
 
