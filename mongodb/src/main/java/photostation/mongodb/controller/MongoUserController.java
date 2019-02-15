@@ -92,7 +92,7 @@ public class MongoUserController {
     }
 
     @RequestMapping(value = "upload", method = RequestMethod.POST)
-    public Result upload(@RequestParam("file") MultipartFile file, @RequestParam(value = "fileName", required = false, defaultValue = "") String fileName) {
+    public Result upload(@RequestBody MultipartFile file, @RequestParam(value = "fileName", required = false, defaultValue = "") String fileName) {
         return new Result<>(service.upload(file, fileName));
     }
 
