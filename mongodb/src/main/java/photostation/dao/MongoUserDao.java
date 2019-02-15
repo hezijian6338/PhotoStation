@@ -1,7 +1,7 @@
-package photostation.mongodb.dao;
+package photostation.dao;
 
-import photostation.mongodb.model.MongoUser;
-import org.springframework.data.mongodb.repository.MongoRepository;
+import photostation.Base.BaseDao;
+import photostation.model.MongoUser;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -20,7 +20,7 @@ import org.springframework.stereotype.Repository;
  **/
 
 @Repository
-public interface MongoUserDao extends MongoRepository<MongoUser, Long> {
+public interface MongoUserDao extends BaseDao<MongoUser, Long> {
 
     /**
      * 根据字字查用户

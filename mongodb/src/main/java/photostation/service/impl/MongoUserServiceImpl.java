@@ -1,4 +1,4 @@
-package photostation.mongodb.service.impl;
+package photostation.service.impl;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.client.gridfs.GridFSFindIterable;
@@ -14,11 +14,13 @@ import org.springframework.data.mongodb.gridfs.GridFsResource;
 import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import photostation.core.untils.FileUtil;
-import photostation.mongodb.dao.MongoUserDao;
-import photostation.mongodb.model.MongoUser;
-import photostation.mongodb.service.MongoUserService;
+import photostation.dao.MongoUserDao;
+import photostation.model.MongoUser;
+import photostation.model.UserFile;
+import photostation.service.MongoUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import photostation.service.UserFileService;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -59,6 +61,9 @@ public class MongoUserServiceImpl implements MongoUserService {
 
     @Autowired
     private GridFsTemplate gridFsTemplate;
+
+    @Autowired
+    private UserFileService userFileService;
 
     @Value("${server.port}")
     private String port;
@@ -102,12 +107,13 @@ public class MongoUserServiceImpl implements MongoUserService {
     }
 
     @Override
-    public String upload(MultipartFile file, String fileName) {
+    public String upload(MultipartFile file, String fileName, String user_id) {
         // GridFS gridFS = new GridFS(mongodbfactory.getLegacyDb(), "photo");
         // LOGGER.info("Saving file..");
         // DBObject metaData = new BasicDBObject();
         BasicDBObject metaData = new BasicDBObject();
-        metaData.put("createdDate", new Date());
+        Date date = new Date();
+        metaData.put("createdDate", date);
 
         if (fileName.isEmpty()) {
             fileName = file.getOriginalFilename();
@@ -121,7 +127,7 @@ public class MongoUserServiceImpl implements MongoUserService {
         DateFormat bf = new SimpleDateFormat("yyyyMMddHHmmss");//多态
         //2017-04-19 星期三 下午 20:17:38
 
-        Date date = new Date();//创建时间
+        // Date date = new Date();//创建时间
         String format = bf.format(date);//格式化 bf.format(date);
 
         String newName = oldName + "_" + format + "." + FileUtil.getFileType(file.getOriginalFilename());
@@ -152,6 +158,12 @@ public class MongoUserServiceImpl implements MongoUserService {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
+
+        UserFile userFile = new UserFile();
+        userFile.setFilename(newName);
+        userFile.setUser_id(user_id);
+        userFile.setCreateDate(date.toString());
+        userFileService.add(userFile);
 
         // String fileUrl = "http://" + address.getHostAddress() + ":" + port + "/mongodb/img/" + newName;
         String fileUrl = "http://" + hostname + ":" + port + "/mongodb/img/" + newName;
@@ -202,12 +214,22 @@ public class MongoUserServiceImpl implements MongoUserService {
     }
 
     @Override
-    public List<byte[]> fileImages () throws IOException {
+    public List<byte[]> fileImages() throws IOException {
         GridFsResource[] gridFsResources = gridFsTemplate.getResources("*");
         List<byte[]> bytes = new ArrayList<>();
         for (GridFsResource gridFsResource : gridFsResources) {
             byte[] data = IOUtils.toByteArray(gridFsResource.getInputStream());
             bytes.add(data);
+        }
+        return bytes;
+    }
+
+    @Override
+    public List<byte[]> userImages(String user_id) throws IOException {
+        List<UserFile> userFiles = userFileService.findAllByUser_id(user_id);
+        List<byte[]> bytes = new ArrayList<>();
+        for (UserFile userFile : userFiles) {
+            bytes.add(this.fileImage(userFile.getFilename(),375));
         }
         return bytes;
     }

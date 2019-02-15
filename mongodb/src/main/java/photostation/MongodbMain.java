@@ -1,4 +1,4 @@
-package photostation.mongodb;
+package photostation;
 
 
 import io.swagger.annotations.ApiOperation;
@@ -10,10 +10,12 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+import photostation.Base.BaseDaoImpl;
 import springfox.documentation.annotations.ApiIgnore;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -43,6 +45,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @RestController
 @EnableSwagger2
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+@EnableMongoRepositories(repositoryBaseClass = BaseDaoImpl.class, basePackages = ("photostation"))
 public class MongodbMain {
     public static void main(String[] args) throws Exception {
         SpringApplication.run(MongodbMain.class, args);
@@ -60,7 +63,7 @@ public class MongodbMain {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("photostation.mongodb"))
+                .apis(RequestHandlerSelectors.basePackage("photostation"))
                 .paths(PathSelectors.any())
                 .build();
     }

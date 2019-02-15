@@ -1,16 +1,12 @@
-package photostation.mongodb.thymeleaf;
+package photostation.thymeleaf;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
-import photostation.core.base.Result;
-import photostation.mongodb.service.MongoUserService;
+import photostation.service.MongoUserService;
 
 import java.io.IOException;
 
@@ -48,10 +44,10 @@ public class ThymeleafController {
         return "attach";
     }
 
-    @RequestMapping(value = "upload")
-    public Result upload(@RequestParam("file") MultipartFile file, @RequestParam(value = "fileName", required = false, defaultValue = "") String fileName) {
-        return new Result<>(mongoUserService.upload(file, fileName));
-    }
+//    @RequestMapping(value = "upload")
+//    public Result upload(@RequestParam("file") MultipartFile file, @RequestParam(value = "fileName", required = false, defaultValue = "") String fileName) {
+//        return new Result<>(mongoUserService.upload(file, fileName, ));
+//    }
 
     @RequestMapping(value = "img/{fileName}")
     public byte[] get(@PathVariable("fileName") String fileName, @RequestParam(value = "w", required = false, defaultValue = "375") int w) throws IOException {

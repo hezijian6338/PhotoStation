@@ -1,4 +1,4 @@
-package photostation.mongodb.model;
+package photostation.model;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;

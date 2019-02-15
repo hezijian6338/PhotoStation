@@ -1,8 +1,7 @@
-package photostation.mongodb.service;
+package photostation.service;
 
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import photostation.mongodb.model.MongoUser;
+import photostation.model.MongoUser;
 
 import java.io.IOException;
 import java.util.List;
@@ -70,10 +69,12 @@ public interface MongoUserService {
      */
     MongoUser update(MongoUser mongoUser);
 
-    String upload (MultipartFile file, String fileName);
+    String upload(MultipartFile file, String fileName, String user_id);
 
-    byte[] fileImage (String fileName, int w) throws IOException;
+    byte[] fileImage(String fileName, int w) throws IOException;
 
-    List<byte[]> fileImages () throws IOException;
+    List<byte[]> fileImages() throws IOException;
+
+    List<byte[]> userImages(String user_id) throws IOException;
 
 }

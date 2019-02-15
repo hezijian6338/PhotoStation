@@ -1,40 +1,16 @@
-package photostation.mongodb.controller;
+package photostation.controller;
 
-import com.mongodb.BasicDBObject;
-import com.mongodb.client.gridfs.GridFSFindIterable;
-import com.mongodb.client.gridfs.model.GridFSFile;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.gridfs.GridFsCriteria;
-import org.springframework.data.mongodb.gridfs.GridFsResource;
-import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import photostation.core.base.Result;
 import photostation.core.constant.CodeConst;
-import photostation.core.untils.FileUtil;
-import photostation.mongodb.model.MongoUser;
-import photostation.mongodb.service.MongoUserService;
+import photostation.model.MongoUser;
+import photostation.service.MongoUserService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Base64;
-import java.util.Date;
 
 /**
  * 把今天最好的表现当作明天最新的起点．．～
@@ -62,9 +38,6 @@ public class MongoUserController {
         this.service = service;
     }
 
-    @Autowired
-    private GridFsTemplate gridFsTemplate;
-
     @Value("${server.port}")
     private String port;
 
@@ -91,9 +64,9 @@ public class MongoUserController {
         return new Result(CodeConst.SUCCESS.getResultCode(), CodeConst.SUCCESS.getMessage());
     }
 
-    @RequestMapping(value = "upload", method = RequestMethod.POST)
-    public Result upload(@RequestBody MultipartFile file, @RequestParam(value = "fileName", required = false, defaultValue = "") String fileName) {
-        return new Result<>(service.upload(file, fileName));
+    @RequestMapping(value = "{user_id}/upload", method = RequestMethod.POST)
+    public Result upload(@RequestBody MultipartFile file, @RequestParam(value = "fileName", required = false, defaultValue = "") String fileName, @PathVariable String user_id) {
+        return new Result<>(service.upload(file, fileName, user_id));
     }
 
     @RequestMapping(value = "img/{fileName}", method = RequestMethod.GET)
