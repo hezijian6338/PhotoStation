@@ -163,6 +163,7 @@ public class MongoUserServiceImpl implements MongoUserService {
         userFile.setFilename(newName);
         userFile.setUser_id(user_id);
         userFile.setCreateDate(date.toString());
+        userFile.setId(null);
         userFileService.add(userFile);
 
         // String fileUrl = "http://" + address.getHostAddress() + ":" + port + "/mongodb/img/" + newName;

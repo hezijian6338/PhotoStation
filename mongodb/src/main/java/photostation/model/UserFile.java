@@ -21,7 +21,7 @@ import org.springframework.data.annotation.Id;
 public class UserFile {
 
     @Id
-    private int id;
+    private String id;
 
     @ApiModelProperty(value = "用户的id")
     private String user_id;
@@ -36,7 +36,7 @@ public class UserFile {
         this.user_id = user_id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -52,7 +52,7 @@ public class UserFile {
         return user_id;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
