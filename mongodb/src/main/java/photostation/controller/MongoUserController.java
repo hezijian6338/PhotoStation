@@ -74,4 +74,9 @@ public class MongoUserController {
         return service.fileImage(fileName, w);
     }
 
+    @RequestMapping(value = "{user_id}/images", method = RequestMethod.GET)
+    public Result userImages(@PathVariable String user_id) throws IOException {
+        return new Result<>(service.userImages(user_id));
+    }
+
 }
