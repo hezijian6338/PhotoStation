@@ -75,6 +75,6 @@ public interface MongoUserService {
 
     List<byte[]> fileImages() throws IOException;
 
-    List<byte[]> userImages(String user_id) throws IOException;
+    List<String> userImages(String user_id) throws IOException;
 
 }

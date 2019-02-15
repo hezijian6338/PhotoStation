@@ -226,13 +226,14 @@ public class MongoUserServiceImpl implements MongoUserService {
     }
 
     @Override
-    public List<byte[]> userImages(String user_id) throws IOException {
+    public List<String> userImages(String user_id) throws IOException {
         List<UserFile> userFiles = userFileService.findAllByUser_id(user_id);
-        List<byte[]> bytes = new ArrayList<>();
+        List<String> images = new ArrayList<>();
         for (UserFile userFile : userFiles) {
-            bytes.add(this.fileImage(userFile.getFilename(),375));
+            String fileUrl = "http://" + hostname + ":" + port + "/mongodb/img/" + userFile.getFilename();
+            images.add(fileUrl);
         }
-        return bytes;
+        return images;
     }
 
 }
