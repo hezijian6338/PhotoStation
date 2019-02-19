@@ -2,6 +2,7 @@ package photostation;
 
 
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -51,11 +52,14 @@ public class MongodbMain {
         SpringApplication.run(MongodbMain.class, args);
     }
 
+    @Value("${https.hostname}")
+    private String https_name;
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     @ApiIgnore()
     @ApiOperation(value = "重定向到api首页")
     public ModelAndView index() {
-        return new ModelAndView("redirect:/swagger-ui.html");
+        return new ModelAndView("redirect:" + https_name + "/swagger-ui.html");
     }
 
     @Bean

@@ -71,6 +71,9 @@ public class MongoUserServiceImpl implements MongoUserService {
     @Value("${server.hostname}")
     private String hostname;
 
+    @Value("${https.hostname}")
+    private String https_name;
+
     @Override
     public List<MongoUser> findAll() {
         return dao.findAll();
@@ -167,7 +170,9 @@ public class MongoUserServiceImpl implements MongoUserService {
         userFileService.add(userFile);
 
         // String fileUrl = "http://" + address.getHostAddress() + ":" + port + "/mongodb/img/" + newName;
-        String fileUrl = "http://" + hostname + ":" + port + "/mongodb/img/" + newName;
+        // String fileUrl = "http://" + hostname + ":" + port + "/mongodb/img/" + newName;
+
+        String fileUrl = https_name + "/mongodb/img/" + newName;
         // LOGGER.info("File return: " + fileName);
 
         return fileUrl;
@@ -230,7 +235,8 @@ public class MongoUserServiceImpl implements MongoUserService {
         List<UserFile> userFiles = userFileService.findAllByUser_id(user_id);
         List<String> images = new ArrayList<>();
         for (UserFile userFile : userFiles) {
-            String fileUrl = "http://" + hostname + ":" + port + "/mongodb/img/" + userFile.getFilename();
+            // String fileUrl = "http://" + hostname + ":" + port + "/mongodb/img/" + userFile.getFilename();
+            String fileUrl = https_name + "/mongodb/img/" + userFile.getFilename();
             images.add(fileUrl);
         }
         return images;
