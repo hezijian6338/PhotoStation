@@ -46,7 +46,7 @@
         <counts>
           <entry key="class" value="4" />
           <entry key="html" value="3" />
-          <entry key="java" value="31" />
+          <entry key="java" value="32" />
           <entry key="properties" value="5" />
           <entry key="txt" value="1" />
           <entry key="xml" value="9" />
@@ -56,7 +56,7 @@
         <counts>
           <entry key="CLASS" value="4" />
           <entry key="HTML" value="3" />
-          <entry key="JAVA" value="31" />
+          <entry key="JAVA" value="32" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="5" />
           <entry key="XML" value="9" />
@@ -65,7 +65,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="55" />
-          <entry key="java" value="1410" />
+          <entry key="java" value="1428" />
           <entry key="properties" value="140" />
           <entry key="xml" value="1" />
         </counts>
@@ -73,7 +73,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="55" />
-          <entry key="JAVA" value="1410" />
+          <entry key="JAVA" value="1428" />
           <entry key="Properties" value="140" />
           <entry key="XML" value="1" />
         </counts>
@@ -85,10 +85,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/service/impl/MongoUserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+            <state relative-caret-position="610">
+              <caret line="235" column="36" selection-start-line="235" selection-start-column="36" selection-end-line="235" selection-end-column="36" />
               <folding>
                 <element signature="e#2160#2180#1" expanded="true" />
+                <element signature="e#2223#2242#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/MongodbMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="59" column="38" lean-forward="true" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+            <state relative-caret-position="287">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2291#2310#1" expanded="true" />
@@ -114,6 +115,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="249">
               <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/service/impl/UserFileServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="62" column="24" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,15 +153,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/Base/BaseDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/2.0.8.RELEASE/spring-data-mongodb-2.0.8.RELEASE.jar!/org/springframework/data/mongodb/repository/MongoRepository.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
@@ -160,7 +164,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/controller/MongoUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1178">
+            <state relative-caret-position="686">
               <caret line="78" column="39" lean-forward="true" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
             </state>
           </provider>
@@ -224,8 +228,8 @@
         <option value="$PROJECT_DIR$/mongodb/src/main/java/photostation/model/UserFile.java" />
         <option value="$PROJECT_DIR$/mongodb/src/main/java/photostation/controller/MongoUserController.java" />
         <option value="$PROJECT_DIR$/mongodb/src/main/java/photostation/service/MongoUserService.java" />
-        <option value="$PROJECT_DIR$/mongodb/src/main/java/photostation/service/impl/MongoUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/mongodb/src/main/resources/config/application.properties" />
+        <option value="$PROJECT_DIR$/mongodb/src/main/java/photostation/service/impl/MongoUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/mongodb/src/main/java/photostation/MongodbMain.java" />
       </list>
     </option>
@@ -651,12 +655,12 @@
       <workItem from="1550192166448" duration="12816000" />
       <workItem from="1550213570865" duration="34000" />
       <workItem from="1550214415320" duration="2119000" />
-      <workItem from="1550541509120" duration="286000" />
+      <workItem from="1550541509120" duration="1866000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35442000" />
+    <option name="totallyTimeSpent" value="37022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -817,16 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/service/impl/UserFileServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/Base/BaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -838,13 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/controller/MongoUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="78" column="39" lean-forward="true" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -865,20 +852,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/service/impl/MongoUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
-          <folding>
-            <element signature="e#2160#2180#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/thymeleaf/ThymeleafController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
           <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodb/src/main/resources/config/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -892,17 +876,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mongodb/src/main/resources/config/application.properties">
+    <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/service/impl/UserFileServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="539">
+          <caret line="62" column="24" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/service/impl/MongoUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="235" column="36" selection-start-line="235" selection-start-column="36" selection-end-line="235" selection-end-column="36" />
+          <folding>
+            <element signature="e#2160#2180#1" expanded="true" />
+            <element signature="e#2223#2242#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/controller/MongoUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="78" column="39" lean-forward="true" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mongodb/src/main/java/photostation/MongodbMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="59" column="38" lean-forward="true" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+        <state relative-caret-position="287">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2291#2310#1" expanded="true" />

@@ -59,7 +59,7 @@ public class MongodbMain {
     @ApiIgnore()
     @ApiOperation(value = "重定向到api首页")
     public ModelAndView index() {
-        return new ModelAndView("redirect:" + https_name + "/swagger-ui.html");
+        return new ModelAndView("redirect:/swagger-ui.html");
     }
 
     @Bean
